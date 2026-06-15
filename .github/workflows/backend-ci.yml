@@ -56,7 +56,7 @@ jobs:
         run: black --check .
 
       - name: Verificar Code Smells com Pylint
-        run: pylint .
+        run: pylint --ignore=migrations .
         
       - name: Checar código duplicado com JSCPD
         run: 
