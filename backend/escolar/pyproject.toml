@@ -1,4 +1,4 @@
-
+[tool.black]
 line-length = 88
 target-version = ['py310', 'py311', 'py312']
 include = '\.pyi?$'
@@ -9,3 +9,18 @@ exclude = '''
   | migrations
 )/
 '''
+
+[tool.pylint.main]
+load-plugins = ["pylint_django"]
+django-settings-module = "escolar.settings"
+ignore = ["migrations", "manage.py"]
+
+[tool.pylint.messages_control]
+disable = [
+    "missing-module-docstring",
+    "missing-class-docstring",
+    "unused-import",
+]
+
+[tool.pylint.design]
+max-parents = 15

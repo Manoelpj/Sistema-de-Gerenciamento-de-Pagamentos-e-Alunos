@@ -1,5 +1,4 @@
-import { useNavigate } from "react-router";
-import { Form } from "react-router";
+import { useNavigate, Form } from "react-router";
 
 export default function CadastroAluno() {
   const navigate = useNavigate();
